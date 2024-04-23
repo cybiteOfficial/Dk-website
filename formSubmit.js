@@ -9,11 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const firstName = form.querySelector("#first_name").value;
     const lastName = form.querySelector("#last_name").value;
     const phoneNumber = form.querySelector("#phone").value;
+    const loanAmount = form.querySelector("#loan").value;
+
+    const loan = Number(loanAmount);
 
     formData.append("first_name", firstName);
     formData.append("last_name", lastName);
     formData.append("mobile_number", phoneNumber);
+    formData.append("loan_amount", loan);
 
+  console.log(loan);
     try {
       const response = await fetch(
         "http://3.111.52.245:8000/api/v1/leads-web",

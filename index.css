@@ -27,54 +27,6 @@ height: 70%;
 
 }
 
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.thankYou{
-  text-align: center;
-  color: #7A306D;
-  margin-bottom: 27px;
-}
-
-.modalText{
-  text-align: center;
-  color: #7A306D;
-  margin-bottom: 27px;
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* Close Button */
-.close {
-  color: #7A306D;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
- 
-  text-decoration: none;
-  cursor: pointer;
-}
 .vertical-line {
   border-left: 1px solid #ccc; /* Adjust the color and thickness as needed */
   height: 20px; /* Adjust the height of the line */
@@ -421,8 +373,39 @@ left: 1%;
 }
 
 
+/* form modal css */
+/* Define styles for the unique class 'welcome-modal-content' */
+.welcome-modal-content {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
 
+.welcome-modal-content .card-title {
+  color: #7A306D;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
 
+.welcome-modal-content .card-text {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.welcome-modal-content .btn-primary {
+  background-color: #7A306D;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* ............................. */
 /* Existing CSS */
 /* Existing CSS */
 .form-content {
@@ -510,7 +493,7 @@ input[type="name"]::placeholder {
     font-weight: 400;
 }
 
-input[type="submit"] {
+.form_button {
     width: 100%;
     padding: 1rem 1rem;
     margin: 0 auto; 
@@ -522,6 +505,9 @@ input[type="submit"] {
     border-radius: 8px;
     border: none; 
     outline: none; 
+}
+.form_button:hover{
+  background-color: #7A306D;
 }
 .form-content form label {
     display: block;
@@ -749,6 +735,30 @@ footer .company-link a:hover{
 }
 /* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
+  /* first modal */
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 27%;
+    width: 100%;
+  }
+  .modal-body{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  .img-top{
+    margin-right: 50%;
+  }
+/* second modal */
+
+
+
+
+/* ...................... */
     .navbar {
       flex-direction: column; /* Stack items vertically */
       text-align: center; /* Center align text */
@@ -804,21 +814,12 @@ footer .company-link a:hover{
   }
   
   @media only screen and (min-width: 375px) and (max-width: 1024px) {
-
-    .left-half h1 {
-      margin-left: 10%;
-      font-weight: 900; /* Set font weight to 900 */
-      font-size: 9.44vw; /* Set font size to 4.44% of the viewport width */
-      line-height: 10.72vw; /* Set line height to 4.72% of the viewport width */
-  
-    }
-    .left-content{
-      line-height: 4.72vw;                                        
-      margin: 0;
-      padding: 10px;
-      margin-left: 2%;
-    }
-
+   
+.card{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
 .center-items{
   display: inline;
 }
